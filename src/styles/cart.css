@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+article{
+    width: 80%;
+    margin: auto;
+}
+.cart_box img{
+    width: 50px;
+    height: 50px;
+}
+.cart_img{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.cart_img p {
+    font-weight: bold;
+    margin-left: 10px;
+    flex-grow: 1; /* Grow to fill remaining space */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+.cart_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 2px solid skyblue;
+    padding-bottom: 5px;
+}
+.cart_box div:nth-child(2) button{
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.cart_box div:nth-child(3) button{
+    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border:none;
+    outline: none;
+    color: white;
+    background-color: skyblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cart_box div:nth-child(3) button:hover{
+    background-color: darkseagreen;
+}
+.cart_box div:nth-child(3) span{
+    background-color: lightgreen;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+.total span:nth-child(1){
+    font-size: 1.5rem;
+    color: skyblue;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 10px; /* Add space between total and checkout button */
+}
+.total span:nth-child(2){
+    font-size: 1.5rem;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px; /* Add space between total and checkout button */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    article{
+        width: 90%;
+    }
+    .cart_box img{
+        width: 40px;
+        height: 40px;
+    }
+    .cart_box div:nth-child(2) button{
+        padding: 3px 8px;
+        font-size: 0.8rem;
+        margin-right: 3px;
+    }
+    .cart_box div:nth-child(3) button{
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+    .total span:nth-child(1),
+    .total span:nth-child(2){
+        font-size: 1rem;
+    }
+}

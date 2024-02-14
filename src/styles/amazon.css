@@ -1,0 +1,23 @@
+.warning {
+    height: 40px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background-color: rgb(210, 91, 91);
+    font-size: 1.1rem;
+    color: white;
+    font-family: cursive;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .warning {
+        width: 90%;
+        max-width: 250px; /* Limit the maximum width */
+        top: 5%; /* Adjust the vertical position */
+        font-size: 1rem; /* Adjust the font size */
+    }
+}
