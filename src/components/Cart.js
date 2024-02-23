@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import "../styles/cart.css";
 
+
 const Cart = ({ cart, setCart, handleChange }) => {
     const [price, setPrice] = useState(0);
+   
 
     const handlePrice = () => {
         let ans = 0;
@@ -19,6 +21,14 @@ const Cart = ({ cart, setCart, handleChange }) => {
     }
 
     const handleCheckout = () => {
+        if(cart.length<1){
+            Swal.fire({
+                title: 'Your Cart is Empty',
+                icon: 'warning',
+                showCancelButton: false,
+                confirmButtonText: 'OK',
+            });
+        } else{
         Swal.fire({
             title: 'Are you sure you want to checkout?',
             text: `Total Price: Rs - ${price}`,
@@ -31,8 +41,9 @@ const Cart = ({ cart, setCart, handleChange }) => {
                 // Perform checkout action here
                 setCart([]); // Example: Clear the cart after checkout
                 Swal.fire('Checked Out!', 'Your order has been placed.', 'success');
+                
             }
-        });
+        });}
     };
 
     useEffect(() => {
@@ -74,6 +85,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
                     cursor: 'pointer'
                 }}
                 onClick={handleCheckout}
+                 // Disable button if cart length is zero or less
             >
                 Checkout
             </button>
