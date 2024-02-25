@@ -1,29 +1,28 @@
 import React from 'react';
-import '../styles/navbar.css';
+import { Menu, Icon } from 'semantic-ui-react';
 
-const Navbar = ({size, setShow}) => {
-  return (
-    <nav>
-        <div className="nav_box">
-        <span style={{
-  fontSize: "1.5rem",
-  fontWeight: "bold",
-  color: 	"blue",
-  fontFamily: "cursive"
-}}>Tejas Store</span>
-
-            <span className="my_shop" style={{alignContent:"center"}} onClick={()=>setShow(true)}>
-                Home
-            </span>
-            <div className="cart" onClick={()=>setShow(false)}>
-                <span>
-                    <i className="fas fa-cart-plus"></i>
-                </span>
-                <span>{size}</span>
-            </div>
+const Navbar = ({ size, setShow }) => {
+    return (
+      < div style={{gap:"20px"}}>
+        <Menu inverted color='violet' className='ui violet inverted three item menu' fixed='top'>
+            <Menu.Item header style={{ fontweight:"bold" }}>
+                Tejas Store
+            </Menu.Item>
+            <Menu.Item
+            style={{fontweight:"bolder"}}
+                name='Home'
+                onClick={() => setShow(true)}
+            />
+          
+                <Menu.Item onClick={() => setShow(false)}>
+                    <Icon name='cart' size='large' />
+                    <div >{size}</div>
+                </Menu.Item>
+       
+        </Menu>
+        
         </div>
-    </nav>
-  )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

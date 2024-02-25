@@ -2,7 +2,7 @@ import React , {useState} from 'react';
 import Navbar from './components/Navbar';
 import Amazon from './components/Amazon';
 import Cart from './components/Cart';
-import './styles/amazon.css';
+import Swal from 'sweetalert2';
 
 const App = () => {
 	const [show, setShow] = useState(true);
@@ -16,10 +16,17 @@ const App = () => {
 			isPresent = true;
 		})
 		if (isPresent){
-			setWarning(true);
-			setTimeout(()=>{
-				setWarning(false);
-			}, 2000);
+			// setWarning(true);
+			// setTimeout(()=>{
+			// 	setWarning(false);
+			// }, 2000);
+			Swal.fire({
+                title: 'Item Already Present in the Cart',
+                icon: 'warning',
+                showCancelButton: false,
+                confirmButtonText: 'OK',
+            });
+		
 			return ;
 		}
 		setCart([...cart, item]);
@@ -39,15 +46,18 @@ const App = () => {
 		setCart([...tempArr])
 	}
 
+	const handleRemove = (id) => {
+        const arr = cart.filter((item) => item.id !== id);
+        setCart(arr);
+    }
+
   return (
 	<>
 		<Navbar size={cart.length} setShow={setShow} />
 		{
-			show ? <Amazon handleClick={handleClick} setShow={setShow} /> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+			show ? <Amazon handleClick={handleClick} handleRemove={handleRemove} /> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} handleRemove={handleRemove}/>
 		}
-		{
-			warning && <div className='warning'>Item is already added to your cart</div>
-		}
+	
 </>
   )
 }

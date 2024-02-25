@@ -12,7 +12,7 @@ const list = [
     title: "Bluetooth Soundbar",
     brand: "Sony",
     price: 2499,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNV0me-Udtb25qMWFWqDJb5R1raNtT1hlSVQ&usqp=CAU",
+    img: "https://rukminim2.flixcart.com/image/850/1000/l0mr7gw0/speaker/soundbar/e/y/w/pure-sound-103-portronics-original-imagcdgwyhjjac6g.jpeg?q=90&crop=false",
     amount: 1,
   },
   {
@@ -20,7 +20,7 @@ const list = [
     title: "Wireless Charging Pad",
     brand: "Anker",
     price: 2999,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_vAvX7fm-D67zV_fUCIFRDrDqBicFB9usQ&usqp=CAU",
+    img: "https://www.cnet.com/a/img/resize/8dfd582b861be518dcb968d1f1b6de01ef114961/hub/2023/02/28/9da2e9c7-d07d-45cb-89d1-18c7013249e5/anker-315-wireless-charger.png?auto=webp&fit=crop&height=900&width=1200",
     amount: 1,
   },
   {
@@ -28,7 +28,7 @@ const list = [
     title: "Portable Bluetooth Speaker",
     brand: "JBL",
     price: 999,
-    img: "https://image.made-in-china.com/318f0j00WEDUoLyqClbN/New-Jb-L-Pluse-5-Bluetooth-Speaker-Full-Screen-Colorful-Wireless-Bluetooth-Speaker-RGB-Colorful-Lumi-mp4.webp",
+    img: "https://www.tejar.pk/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/s/o/sony_portable_wireless_bluetooth_speaker_-_srs-xb106_-_tejar.jpg",
     amount: 1,
   },
   {
@@ -60,7 +60,7 @@ const list = [
     title: "Electric Toothbrush",
     brand: "Philips Sonicare",
     price: 5999,
-    img: "https://www.shutterstock.com/image-vector/realistic-detailed-3d-electric-toothbrush-260nw-2248562029.jpg",
+    img: "https://images.unsplash.com/photo-1559671216-bda69517c47f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWxlY3RyaWMlMjB0b290aGJydXNofGVufDB8fDB8fHww",
     amount: 1,
   },
   {
@@ -76,7 +76,7 @@ const list = [
     title: "Wireless Earbuds",
     brand: "Bose",
     price: 1999,
-    img: "https://cdn.mos.cms.futurecdn.net/GHnJBkCHn22NgNGQWtpxhF-1200-80.jpg",
+    img: "https://rukminim2.flixcart.com/image/850/1000/xif0q/headphone/k/i/b/air-buds-d79-upto-30hrs-playback-13mm-driver-true-wireless-original-imagxc4stpkpss4y.jpeg?q=20&crop=false",
     amount: 1,
   },
   {
@@ -89,10 +89,10 @@ const list = [
   },
   {
     id: 12,
-    title: "Wireless Keyboard and Mouse Combo",
+    title: "Wireless Keyboard and Mouse ",
     brand: "HP",
     price: 399,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNyaxdYsLaqlXFngXWR7njIfGONrvMAcJCrw&usqp=CAU",
+    img: "https://m.media-amazon.com/images/I/718+P5pqczL.jpg",
     amount: 1,
   },
 ];
